@@ -1,0 +1,8 @@
+.container {
+    align-content: center;
+}
+.jumbotron {
+    text-align: center;
+    color: white;
+    background-color: blue;
+}
