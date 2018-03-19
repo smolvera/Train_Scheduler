@@ -27,7 +27,7 @@
                     <div class="panel panel-primary class">
                         <div class="panel-heading">Current Train Schedule</div>
                         <div class="panel-body">
-                            <table class="table table-hover" id='schedule-table'>
+                            <table class="table table-hover" id="schedule-table">
                                 <thead>
                                     <tr>
                                         <th>Train Name</th>
@@ -37,6 +37,7 @@
                                         <th>Minutes Away</th>
                                     </tr>
                                 </thead>
+                                    <tbody></tbody>
                             </table>
                         </div>
                     </div>  
@@ -71,22 +72,25 @@
 
                                 <div class="form-group">
                                     <label for="frequency">Frequency (min):</label>
-                                    <input type="mm" class="form-control" id="frequency">
+                                    <input type="time-mm" class="form-control" id="frequency">
                                 </div>
 
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <button class="btn btn-default" id="add-train-btn" type="submit">Submit</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </col-md-10>
         </row>
-    </div>    
+    </div>   
+     <!--Momment JS link  -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script>
     <!-- Firebase link -->
     <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
-    <!-- Javascript Link -->
-    <script src="assets/javascript/app.js"></script>
     <!-- JQuery Link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" 
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- Javascript Link (Always last script!!) -->
+    <script src="assets/javascript/app.js"></script>
 </body>
 </html>
