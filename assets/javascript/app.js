@@ -24,11 +24,11 @@
 var trainName = $("#trainName").val().trim();
 var destination = $("#destination").val().trim();
 var trainTime = moment($("#time").val().trim(), "hh:mm").format("X");
-var frequency = moment($("#frequency").val().trim());
+var frequency = $("#frequency").val().trim();
 
 // testing and debugging
-console.log(trainTime, "15:00");
-console.log(frequency, "35");
+console.log(trainTime);
+console.log(frequency);
 
 // variable is created to temporarialy hold the input data
 var newTrain = {
@@ -99,6 +99,7 @@ database.ref().on("child_added", function(childSnapshot, prevChildKey){
   var nextArrival = moment().add(minutesTillTrain, "minutes").format("hh:mm A");
   console.log(nextArrival);
 
+  // Upload the information to the page
   $("#schedule-table > tbody").append("<tr><td>" + trainName + "</td><td>" + destination + "</td><td>" +
   frequency + "</td><td>" + nextArrival + "</td><td>" + minutesTillTrain + "</td><td>");
 });
